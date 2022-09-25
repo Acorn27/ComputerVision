@@ -12,6 +12,7 @@ cv.imshow('Binary image',b_img)
 
 kernel = cv.getStructuringElement(cv.MORPH_ELLIPSE,(7,7))
 #kernel2 = cv.getStructuringElement(cv.MORPH_CROSS,(7,7),(0,0))
+
 #close morphology
 out1 = cv.morphologyEx(b_img,cv.MORPH_CLOSE, kernel, iterations=1)
 #out2 = cv.erode(b_img, kernel2, iterations=1)
