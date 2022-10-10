@@ -2,12 +2,14 @@ from array import array
 import numpy as np
 import cv2 as cv
 
-img = cv.imread('anchor.png', cv.IMREAD_GRAYSCALE)
+img = cv.imread("C:\\Users\\tmmh2\\Downloads\\anchor.png", cv.IMREAD_GRAYSCALE)
 b_img = cv.threshold(img,150,255,cv.THRESH_BINARY)[1]
 cv.imshow('Binary image',b_img)
 
+# need numpy for shape
 width = img.shape[1]
 heigh = img.shape[0]
+
 print(width)
 print(heigh)
 

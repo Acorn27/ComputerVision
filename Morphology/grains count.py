@@ -19,7 +19,7 @@ erode_image = cv.erode(b_image, cv.getStructuringElement(cv.MORPH_ERODE, (4,4)),
 cv.imshow("Erode", erode_image)
 contours,_= cv.findContours(erode_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 print(len(contours))
-#cv.drawContours(image, contours, -1, (0, 0, 255), 2)
+cv.drawContours(image, contours, -1, (0, 0, 255), 2)
 
 count = 1
 for contour in contours:
