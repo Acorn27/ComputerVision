@@ -1,4 +1,5 @@
 I = imread('rice.jpg')
+imshow(I)
 
 % mask = imbinarize(I)
 % otsu method do not work well in this situatiob
@@ -29,5 +30,13 @@ imshow(M, [])
 % kind of
 % M = imclearborder(BW) = removes true regions which intersect with the 
 % image border
-M = imclearborder(M)
-imshow(M, [])
+%M = imclearborder(M)
+%imshow(M, [])
+
+dd = -bwdist(~M);
+d2 = imhmin(dd, 2);
+mesh(d2);
+
+L = watershed(d2);
+M (L == 0) = false;
+imshow(M)
